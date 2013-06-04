@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Web.Mvc;
 
-namespace SharpUtil.ValidationAttributes
+namespace SharpUtils.ValidationAttributes
 {
     public class StateValidator : DataAnnotationsModelValidator<StateAttribute>
     {

@@ -7,8 +7,8 @@
     <ProjectGuid>{898C6B0A-F7E6-4728-88C5-401A6BDC78D1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SharpUtil</RootNamespace>
-    <AssemblyName>SharpUtil</AssemblyName>
+    <RootNamespace>SharpUtils</RootNamespace>
+    <AssemblyName>SharpUtils</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">.\</SolutionDir>

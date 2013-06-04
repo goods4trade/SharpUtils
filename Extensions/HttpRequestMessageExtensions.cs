@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net.Http;
 
-namespace SharpUtil
+namespace SharpUtils
 {
     public static partial class Extensions
     {

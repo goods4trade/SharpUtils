@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace SharpUtil.ValidationAttributes
+namespace SharpUtils.ValidationAttributes
 {
     public class NameAttribute : RegularExpressionAttribute
     {

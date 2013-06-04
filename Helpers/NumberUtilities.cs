@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SharpUtil.Helpers
+namespace SharpUtils.Helpers
 {
     public class NumberUtilities
     {

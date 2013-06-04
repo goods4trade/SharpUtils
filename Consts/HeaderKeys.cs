@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SharpUtil.Consts
+namespace SharpUtils.Consts
 {
     public class HeaderKeys
     {

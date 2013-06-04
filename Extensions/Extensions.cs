@@ -10,7 +10,7 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
-namespace SharpUtil
+namespace SharpUtils
 {
     public static partial class Extensions
     {

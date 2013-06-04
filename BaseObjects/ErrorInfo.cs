@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SharpUtil.BaseObjects
+namespace SharpUtils.BaseObjects
 {
     public class ErrorInfo
     {

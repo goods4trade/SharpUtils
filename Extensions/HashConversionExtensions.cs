@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Text;
 
-namespace SharpUtil
+namespace SharpUtils
 {
     public static partial class Extensions
     {

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.IO;
 
-namespace SharpUtil
+namespace SharpUtils
 {
     public static class IdKeyGenerator
     {

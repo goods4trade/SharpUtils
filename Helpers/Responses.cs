@@ -4,9 +4,9 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections.Generic;
-using SharpUtil.BaseObjects;
+using SharpUtils.BaseObjects;
 
-namespace SharpUtil.Helpers
+namespace SharpUtils.Helpers
 {
     public class Responses
     {

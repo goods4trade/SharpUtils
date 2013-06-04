@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SharpUtil.RegularExpressions
+namespace SharpUtils.RegularExpressions
 {
     public class Validations
     {

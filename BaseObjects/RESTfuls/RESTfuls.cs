@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace SharpUtil.BaseObjects.RESTfuls
+namespace SharpUtils.BaseObjects.RESTfuls
 {
     public class RESTfuls<T>
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SharpUtil.BaseObjects.RESTfuls
+namespace SharpUtils.BaseObjects.RESTfuls
 {
     public class Hyperlink
     {

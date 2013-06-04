@@ -8,7 +8,7 @@ using System.Collections.Generic;
 
 
 
-namespace SharpUtil.Helpers
+namespace SharpUtils.Helpers
 {
     public class Requests
     {

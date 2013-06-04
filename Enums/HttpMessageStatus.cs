@@ -1,4 +1,4 @@
-﻿namespace SharpUtil.Enums
+﻿namespace SharpUtils.Enums
 {
     public enum HttpMessageStatus
     {
