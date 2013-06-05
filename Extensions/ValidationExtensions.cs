@@ -5,6 +5,17 @@ namespace SharpUtils
 {
     public static partial class Extensions
     {
+        public static bool IsValidPhoneUS(this string s)
+        {
+            Regex re = new Regex(RegularExpressions.Validations.USPhoneRuleRegex, RegexOptions.Compiled | RegexOptions.IgnoreCase);
+            return (re.IsMatch(s));
+        }
+
+        public static bool IsValidEmailAddress(this string s)
+        {
+            Regex re = new Regex(RegularExpressions.Validations.EmailRuleRegex, RegexOptions.Compiled | RegexOptions.IgnoreCase);
+            return (re.IsMatch(s));
+        }
 
         public static bool IsNumeric(this string s)
         {
@@ -25,22 +36,10 @@ namespace SharpUtils
             return regex.IsMatch(s.ToString());
         }
 
-        public static bool IsEmail(this string s)
-        {
-            Regex re = new Regex(RegularExpressions.Validations.EmailRuleRegex, RegexOptions.Compiled | RegexOptions.IgnoreCase);
-            return (re.IsMatch(s));
-        }
-
         public static bool IsBase64String(this string s)
         {
             s = s.Trim();
             return (s.Length % 4 == 0) && Regex.IsMatch(s, @"^[a-zA-Z0-9\+/]*={0,3}$", RegexOptions.None);
-        }
-
-        public static bool IsValidPhoneUS(this string s)
-        {
-            Regex re = new Regex(RegularExpressions.Validations.USPhoneRuleRegex, RegexOptions.Compiled | RegexOptions.IgnoreCase);
-            return (re.IsMatch(s));
         }
 
         public static bool IsDefaultGuid(this Guid g)
@@ -50,6 +49,5 @@ namespace SharpUtils
             Regex regex = new Regex(strRegex, RegexOptions.IgnoreCase | RegexOptions.Compiled);
             return regex.IsMatch(s);
         }
-
     }
 }

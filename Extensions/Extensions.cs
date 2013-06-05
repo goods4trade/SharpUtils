@@ -74,14 +74,6 @@ namespace SharpUtils
             return Regex.Replace(Regex.Replace(s, @"(\P{Ll})(\P{Ll}\p{Ll})", "$1 $2"), @"(\p{Ll})(\P{Ll})", "$1 $2");
         }
 
-        public static string ReplaceAllSpecialCharacters(this string s, string replaceString)
-        {
-            string strRegex = @"[^A-Za-z0-9_-]";
-            s = (s ?? "");
-            Regex regex = new Regex(strRegex, RegexOptions.IgnoreCase | RegexOptions.Compiled);
-            return regex.Replace(s, replaceString);
-        }
-
         public static string ConvertStringToStandardVariableName(this string s)
         {
             string replaceString = "_",
@@ -90,27 +82,6 @@ namespace SharpUtils
             s = (s ?? "");
             Regex regex = new Regex(strRegex, RegexOptions.IgnoreCase | RegexOptions.Compiled);
             return regex.Replace(s, replaceString).ReplaceAllRepeatedCharacters('_', "_");
-        }
-
-        public static string ReplaceAllRepeatedCharacters(this string s, char repeatChar, string replaceString)
-        {
-            string strRegex = "[" + repeatChar.ToString() + "]{2,}";
-
-            s = (s ?? "");
-            replaceString = (replaceString ?? "");
-            Regex regex = new Regex(strRegex, RegexOptions.IgnoreCase | RegexOptions.Compiled);
-            return regex.Replace(s, replaceString);
-        }
-
-        public static string HTMLStrip(this string s)
-        {
-            return s.HTMLStrip(string.Empty);
-        }
-
-        public static string HTMLStrip(this string s, string replaceString)
-        {
-            string RegxPattern = "(<([^>]+)>)";
-            return Regex.Replace(s, RegxPattern, replaceString, RegexOptions.IgnoreCase);
         }
 
         public static string Left(this string s, int count)

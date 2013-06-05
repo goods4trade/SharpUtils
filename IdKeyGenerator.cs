@@ -233,12 +233,6 @@ namespace SharpUtils
             return md5.ComputeHash(bytes).Byte2String();
         }
 
-
-
-
-
-
-
         // not done yet........
         public static void PasswordEncryption()
         {
@@ -364,27 +358,6 @@ namespace SharpUtils
 
             }
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         #endregion cryptography
     }
