@@ -9,6 +9,6 @@ namespace SharpUtils.Consts
         public const string ApiAuthorizedKeyName = "X-Api-Auth-Key";
         public const string ApiAuthorizedKeyStatusName = "X-Api-Auth-Key-Status";
         public const string ForwardedForKeyName = "X-Forwarded-For";
-        public const string ForwardedForApiKeyName = "X-Forwarded-For-ETSMS-Api";
+        public const string ForwardedForApiKeyName = "X-Forwarded-For-Api";
     }
 }

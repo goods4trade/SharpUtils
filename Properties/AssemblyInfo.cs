@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("SharpUtils")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("A collection of useful helpers, extensions, and methods for use in a C#/Asp.Net Project")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("MAXX Integration")]
 [assembly: AssemblyProduct("SharpUtils")]
 [assembly: AssemblyCopyright("Copyright ©  2013")]
 [assembly: AssemblyTrademark("")]
