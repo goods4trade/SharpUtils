@@ -44,7 +44,7 @@ namespace SharpUtils.Helpers
                 // get the client ip if there are multiple ips present in HTTP_X_FORWARDED_FOR. 
                 // The general format of the field is:
                 // X-Forwarded-For: client, proxy1, proxy2
-                ip = string.IsNullOrEmpty(ip) ? ip : ip.Split(',')[0].Trim();
+                ip = string.IsNullOrEmpty(ip) ? ip : ip.Split(',').First().Trim();
 
                 if (string.IsNullOrEmpty(ip))
                 {
