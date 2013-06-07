@@ -33,5 +33,12 @@ namespace SharpUtils
             string RegxPattern = "(<([^>]+)>)";
             return Regex.Replace(s, RegxPattern, replaceString, RegexOptions.IgnoreCase);
         }
+
+        // change the first letter to upper case
+        // ex: "this is good!" to "This is good"
+        public static string FirstLetterUpper(this string s)
+        {
+            return Regex.Replace(s, @"^\W*\w", new MatchEvaluator(match => match.Value.ToUpper()));
+        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Net.Http;
 
 namespace SharpUtils
@@ -7,6 +8,18 @@ namespace SharpUtils
     {
         private const string _httpContext = "MS_HttpContext";
         private const string _remoteEndpointMessage = "System.ServiceModel.Channels.RemoteEndpointMessageProperty";
+
+        public static string GetHeaderKeyValue(this HttpRequestMessage request, string headerKey)
+        {
+            string value = string.Empty;
+
+            if (request.Headers.Contains(headerKey))
+            {
+                value = request.Headers.GetValues(headerKey).SingleOrDefault();
+            }
+
+            return value;
+        }
 
         public static string GetClientIpAddress(this HttpRequestMessage request)
         {
@@ -30,5 +43,6 @@ namespace SharpUtils
 
             return null;
         }
+        
     }
 }

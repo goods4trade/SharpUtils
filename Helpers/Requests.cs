@@ -13,6 +13,9 @@ namespace SharpUtils.Helpers
     public class Requests
     {
         static string _forwardedForApiIP = string.Empty;
+        static string _apiRoutePermission = string.Empty;
+        static string _apiAuthorizedKey = string.Empty;
+        static string _apiUserKey = string.Empty;
 
         public static string RootUrl = HttpContext.Current.Request.Url.Scheme + "://" + HttpContext.Current.Request.ServerVariables["http_host"];
         public static string QueryString = HttpContext.Current.Request.Url.Query.ToString();
@@ -25,9 +28,9 @@ namespace SharpUtils.Helpers
         {
             get
             {
-                if (string.IsNullOrEmpty(_forwardedForApiIP) && HttpContext.Current.Request.Headers.AllKeys.Contains(Consts.HeaderKeys.ForwardedForApiKeyName))
+                if (string.IsNullOrEmpty(_forwardedForApiIP) && HttpContext.Current.Request.Headers.AllKeys.Contains(Consts.HeaderKeys.ForwardedForApiName))
                 {
-                    _forwardedForApiIP = HttpContext.Current.Request.Headers.GetValues(Consts.HeaderKeys.ForwardedForApiKeyName).SingleOrDefault();
+                    _forwardedForApiIP = HttpContext.Current.Request.Headers.GetValues(Consts.HeaderKeys.ForwardedForApiName).SingleOrDefault();
                 }
 
                 return string.IsNullOrEmpty(_forwardedForApiIP) ? ClientIP : _forwardedForApiIP;
@@ -54,6 +57,42 @@ namespace SharpUtils.Helpers
                 return ip;
             }        
         }
-        
+
+        public static string ApiRoutePermission
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(_apiRoutePermission) && HttpContext.Current.Request.Headers.AllKeys.Contains(Consts.HeaderKeys.ApiRoutePermissionName))
+                {
+                    _apiRoutePermission = HttpContext.Current.Request.Headers.GetValues(Consts.HeaderKeys.ApiRoutePermissionName).SingleOrDefault();
+                }
+                return _apiRoutePermission;
+            }
+        }
+
+        public static string ApiAuthorizedKey
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(_apiAuthorizedKey) && HttpContext.Current.Request.Headers.AllKeys.Contains(Consts.HeaderKeys.ApiAuthorizedKeyName))
+                {
+                    _apiAuthorizedKey = HttpContext.Current.Request.Headers.GetValues(Consts.HeaderKeys.ApiAuthorizedKeyName).SingleOrDefault();
+                }
+                return _apiAuthorizedKey;
+            }
+        }
+
+        public static string ApiUserKey
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(_apiUserKey) && HttpContext.Current.Request.Headers.AllKeys.Contains(Consts.HeaderKeys.ApiUserKeyName))
+                {
+                    _apiUserKey = HttpContext.Current.Request.Headers.GetValues(Consts.HeaderKeys.ApiUserKeyName).SingleOrDefault();
+                }
+                return _apiUserKey;
+            }
+        }
+
     }
 }
