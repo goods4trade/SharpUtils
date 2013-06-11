@@ -16,6 +16,7 @@ namespace SharpUtils.Helpers
         static string _apiRoutePermission = string.Empty;
         static string _apiAuthorizedKey = string.Empty;
         static string _apiUserKey = string.Empty;
+        static string _apiAccess = string.Empty;
 
         public static string RootUrl = HttpContext.Current.Request.Url.Scheme + "://" + HttpContext.Current.Request.ServerVariables["http_host"];
         public static string QueryString = HttpContext.Current.Request.Url.Query.ToString();
@@ -94,5 +95,16 @@ namespace SharpUtils.Helpers
             }
         }
 
+        public static bool ApiAccess
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(_apiAccess) && HttpContext.Current.Request.Headers.AllKeys.Contains(Consts.HeaderKeys.ApiAccessName))
+                {
+                    _apiAccess = HttpContext.Current.Request.Headers.GetValues(Consts.HeaderKeys.ApiAccessName).SingleOrDefault();
+                }
+                return Convert.ToBoolean(string.IsNullOrEmpty(_apiAccess) ? "false" : _apiAccess);
+            }
+        }
     }
 }

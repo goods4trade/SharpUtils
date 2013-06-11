@@ -43,6 +43,12 @@ namespace SharpUtils
 
             return null;
         }
+
+        public static bool IsApiAccess(this HttpRequestMessage request)
+        {
+            string value = request.GetHeaderKeyValue(SharpUtils.Consts.HeaderKeys.ApiAccessName);
+            return Convert.ToBoolean(string.IsNullOrEmpty(value) ? "false" : value);
+        }
         
     }
 }
