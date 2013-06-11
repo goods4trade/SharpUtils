@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="BaseObjects\ContactInfo.cs" />
     <Compile Include="BaseObjects\ErrorInfo.cs" />
+    <Compile Include="BaseObjects\HttpMessage.cs" />
     <Compile Include="BaseObjects\HttpStatusMessage.cs" />
     <Compile Include="BaseObjects\RESTfuls\Hyperlink.cs" />
     <Compile Include="BaseObjects\RESTfuls\Pagination.cs" />
@@ -76,6 +77,7 @@
     <Compile Include="Extensions\ParseObjectExtensions.cs" />
     <Compile Include="Extensions\ReplaceExtensions.cs" />
     <Compile Include="Extensions\ValidationExtensions.cs" />
+    <Compile Include="Handlers\HyphenatedRouteHandler.cs" />
     <Compile Include="Helpers\CurrentClaimsPrincipal.cs" />
     <Compile Include="Helpers\CurrentUserPermision.cs" />
     <Compile Include="Helpers\NumberUtilities.cs" />

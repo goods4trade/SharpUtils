@@ -1,12 +1,8 @@
-﻿using System;
-using System.Net;
-
-namespace SharpUtils.BaseObjects
+﻿namespace SharpUtils.BaseObjects
 {
-    public class HttpStatusMessage
+    public class HttpStatusMessage : HttpMessage
     {
-        public int Status { get; set; }
-        public string Message { get; set; }
+        public int Status { get; set; }        
         public string MessageDetail { get; set; }
     }
 }

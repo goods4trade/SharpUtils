@@ -23,7 +23,7 @@ namespace SharpUtils.Helpers
             return hasPermission > 0;
         }
 
-        public bool? GetAllUsers
+        public bool GetAllUsers
         {
             get
             {
@@ -31,7 +31,7 @@ namespace SharpUtils.Helpers
                 {
                     _getAllUsers = HasPermission(Consts.Permissions.GetAllUsers);
                 }
-                return _getAllUsers;
+                return _getAllUsers ?? false;
             }
         }
 
