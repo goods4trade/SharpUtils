@@ -21,6 +21,18 @@ namespace SharpUtils
             return value;
         }
 
+        public static string GetHeaderKeyValue(this HttpResponseMessage response, string headerKey)
+        {
+            string value = string.Empty;
+
+            if (response.Headers.Contains(headerKey))
+            {
+                value = response.Headers.GetValues(headerKey).SingleOrDefault();
+            }
+
+            return value;
+        }
+
         public static string GetClientIpAddress(this HttpRequestMessage request)
         {
             if (request.Properties.ContainsKey(_httpContext))

@@ -15,6 +15,8 @@ namespace SharpUtils.Helpers
         string _email;
         string _mobilePhone;
         string _claimStart;
+        string _accessToken;
+        string _appId;
         List<SharpUtils.BaseObjects.UserPermissions.Permissions> _permissions = null;
         ClaimsPrincipal _currentClaimsPrincipal;
 
@@ -86,6 +88,30 @@ namespace SharpUtils.Helpers
                     _claimStart = GetClaim(Consts.ClaimKeys.ClaimStart);
                 }
                 return string.IsNullOrEmpty(_claimStart) ? (DateTime?)null : Convert.ToDateTime(_claimStart);
+            }
+        }
+
+        public string AccessToken
+        {
+            get
+            {
+                if (_accessToken == null)
+                {
+                    _accessToken = GetClaim(Consts.ClaimKeys.AccessToken);
+                }
+                return _accessToken;
+            }
+        }
+
+        public string AppId
+        {
+            get
+            {
+                if (_appId == null)
+                {
+                    _appId = GetClaim(Consts.ClaimKeys.AppId);
+                }
+                return _appId;
             }
         }
 

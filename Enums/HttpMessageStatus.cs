@@ -10,6 +10,7 @@
         ExpiredUserKey,
         SSLRequired,
         AuthenticationRequired,
-        InvalidAuthenticationScheme
+        InvalidAuthenticationScheme,
+        InvalidAccessToken
     }
 }

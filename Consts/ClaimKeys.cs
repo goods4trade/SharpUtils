@@ -8,5 +8,7 @@
         public const string MobilePhone = "MobilePhone";
         public const string ClaimStart = "ClaimStart";
         public const string UserPermission = "UserPermission";
+        public const string AccessToken = "AccessToken";
+        public const string AppId = "AppId";
     }
 }

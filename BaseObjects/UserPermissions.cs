@@ -6,6 +6,7 @@ namespace SharpUtils.BaseObjects
     public class UserPermissions
     {
         public string UserId { get; set; }
+        public string AccessToken { get; set; }
         public List<Permissions> Permission { get; set; }
 
         public class Permissions
