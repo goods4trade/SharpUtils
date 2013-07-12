@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net;
 
-namespace SharpUtils.BaseObjects
+namespace MAXX.Utils.BaseObjects
 {
     public class HttpStatusMessage
     {

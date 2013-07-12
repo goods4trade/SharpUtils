@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Text;
 
-namespace SharpUtils
+namespace MAXX.Utils
 {
     public static partial class Extensions
     {
@@ -18,7 +18,7 @@ namespace SharpUtils
 
         public static string ToRfc2898Hash(this string s, string salt)
         {
-            return IdKeyGenerator.CreateRfc2898Salt(s, salt);
+            return IdKeyGenerator.CreateRfc2898SaltBase64(s, salt);
         }
 
         public static string Byte2String(this byte[] bytes)

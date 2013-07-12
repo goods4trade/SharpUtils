@@ -1,9 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace SharpUtils.ValidationAttributes
+namespace MAXX.Utils.ValidationAttributes
 {
     public class FullNameAttribute : RegularExpressionAttribute
     {
-        public FullNameAttribute() : base(RegularExpressions.Validations.FullNameRegex) { }
+        public FullNameAttribute() : base(RegularExpressions.Validations.FullNameRegex) { } 
     }
 }

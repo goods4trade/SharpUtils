@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace SharpUtils.BaseObjects
+namespace MAXX.Utils.BaseObjects
 {
     public class ContactInfo
     {

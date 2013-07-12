@@ -2,7 +2,7 @@
 using System.Web.Mvc;
 
 
-namespace SharpUtils.ValidationAttributes
+namespace MAXX.Utils.ValidationAttributes
 {
     public class DigitOnlyValidator : DataAnnotationsModelValidator<DigitOnlyAttribute>
     {

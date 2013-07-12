@@ -1,7 +1,8 @@
-﻿using System;
+﻿using MAXX.Utils.Attributes;
+using System;
 using System.Text.RegularExpressions;
 
-namespace SharpUtils
+namespace MAXX.Utils
 {
     public static partial class Extensions
     {
@@ -39,6 +40,20 @@ namespace SharpUtils
         public static string FirstLetterUpper(this string s)
         {
             return Regex.Replace(s, @"^\W*\w", new MatchEvaluator(match => match.Value.ToUpper()));
+        }
+
+        //Sets any properties marked [Private] to null values, or default values for valueTypes.
+        public static T SetPrivateAttributeFieldValue<T>(this T o)
+        {
+            foreach (var key in typeof(T).GetProperties())
+            {
+                if ((PrivateAttribute)Attribute.GetCustomAttribute(key, typeof(PrivateAttribute)) != null)
+                {
+                    key.SetValue(o, null);
+                }
+            }
+
+            return o;
         }
     }
 }

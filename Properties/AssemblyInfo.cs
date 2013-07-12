@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("SharpUtils")]
+[assembly: AssemblyTitle("MAXX.Utils")]
 [assembly: AssemblyDescription("A collection of useful helpers, extensions, and methods for use in a C#/Asp.Net Project")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("MAXX Integration")]
-[assembly: AssemblyProduct("SharpUtils")]
+[assembly: AssemblyProduct("MAXX.Utils")]
 [assembly: AssemblyCopyright("Copyright ©  2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

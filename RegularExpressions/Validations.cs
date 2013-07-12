@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SharpUtils.RegularExpressions
+namespace MAXX.Utils.RegularExpressions
 {
     public class Validations
     {

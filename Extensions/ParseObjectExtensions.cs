@@ -6,7 +6,7 @@ using System.Web.Script.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
-namespace SharpUtils
+namespace MAXX.Utils
 {
     public static partial class Extensions
     {

@@ -1,0 +1,7 @@
+C:\Projects\ASP.net\MAXXDev\Github\maxx.cms\MAXX.Util\obj\Release\MAXX.Utils.csprojResolveAssemblyReference.cache
+C:\Projects\ASP.net\MAXXDev\Github\maxx.cms\MAXX.Util\bin\Release\MAXX.Utils.dll
+C:\Projects\ASP.net\MAXXDev\Github\maxx.cms\MAXX.Util\bin\Release\MAXX.Utils.pdb
+C:\Projects\ASP.net\MAXXDev\Github\maxx.cms\MAXX.Util\bin\Release\Newtonsoft.Json.dll
+C:\Projects\ASP.net\MAXXDev\Github\maxx.cms\MAXX.Util\bin\Release\Newtonsoft.Json.xml
+C:\Projects\ASP.net\MAXXDev\Github\maxx.cms\MAXX.Util\obj\Release\MAXX.Utils.dll
+C:\Projects\ASP.net\MAXXDev\Github\maxx.cms\MAXX.Util\obj\Release\MAXX.Utils.pdb

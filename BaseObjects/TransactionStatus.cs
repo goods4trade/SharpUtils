@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SharpUtils.BaseObjects
+namespace MAXX.Utils.BaseObjects
 {
     public class TransactionStatus
     {

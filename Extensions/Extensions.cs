@@ -10,7 +10,7 @@ using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
-namespace SharpUtils
+namespace MAXX.Utils
 {
     public static partial class Extensions
     {
@@ -86,14 +86,12 @@ namespace SharpUtils
 
         public static string Left(this string s, int count)
         {
-            return s.Substring(0, count);
+            return s.Length <= count ? s : s.Substring(0, count);
         }
 
         public static string Right(this string s, int count)
         {
-            if (count > s.Length)
-                return s;
-            return s.Substring(s.Length - count, count);
+            return s.Length <= count ? s : s.Substring(s.Length - count, count);
         }
 
         public static int GetUrlSlugId(this string s, char delimiter)

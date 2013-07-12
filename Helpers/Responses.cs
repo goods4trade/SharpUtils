@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Net;
-using SharpUtils.BaseObjects;
+using MAXX.Utils.BaseObjects;
 
-namespace SharpUtils.Helpers
+namespace MAXX.Utils.Helpers
 {
     public class Responses
     {

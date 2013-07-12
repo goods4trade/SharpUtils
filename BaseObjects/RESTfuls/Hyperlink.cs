@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SharpUtils.BaseObjects.RESTfuls
+namespace MAXX.Utils.BaseObjects.RESTfuls
 {
     public class Hyperlink
     {

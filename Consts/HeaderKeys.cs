@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SharpUtils.Consts
+namespace MAXX.Utils.Consts
 {
     public class HeaderKeys
     {

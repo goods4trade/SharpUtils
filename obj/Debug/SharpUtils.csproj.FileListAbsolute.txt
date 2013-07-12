@@ -1,0 +1,7 @@
+C:\Projects\ASP.net\MAXXDev\Github\SharpUtils\bin\Debug\SharpUtils.dll
+C:\Projects\ASP.net\MAXXDev\Github\SharpUtils\bin\Debug\SharpUtils.pdb
+C:\Projects\ASP.net\MAXXDev\Github\SharpUtils\bin\Debug\Newtonsoft.Json.dll
+C:\Projects\ASP.net\MAXXDev\Github\SharpUtils\bin\Debug\Newtonsoft.Json.xml
+C:\Projects\ASP.net\MAXXDev\Github\SharpUtils\obj\Debug\SharpUtils.dll
+C:\Projects\ASP.net\MAXXDev\Github\SharpUtils\obj\Debug\SharpUtils.pdb
+C:\Projects\ASP.net\MAXXDev\Github\SharpUtils\obj\Debug\SharpUtils.csprojResolveAssemblyReference.cache

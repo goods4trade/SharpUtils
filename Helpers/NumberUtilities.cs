@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SharpUtils.Helpers
+namespace MAXX.Utils.Helpers
 {
     public class NumberUtilities
     {

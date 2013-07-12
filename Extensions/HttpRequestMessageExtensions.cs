@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Net.Http;
 
-namespace SharpUtils
+namespace MAXX.Utils
 {
     public static partial class Extensions
     {

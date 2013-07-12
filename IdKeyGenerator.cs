@@ -5,11 +5,10 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.IO;
 
-namespace SharpUtils
+namespace MAXX.Utils
 {
     public static class IdKeyGenerator
     {
-
         // output example: 19-109
         //public static string NumberHash()
         //{
@@ -148,14 +147,19 @@ namespace SharpUtils
         #region cryptography
 
         // generate salt by string and phrase
-        public static string CreateRfc2898Salt(string plainText, string saltPhrase)
+        public static byte[] CreateRfc2898Salt(string plainText, string saltPhrase, int cb = 25)
         {
             Rfc2898DeriveBytes salt = new Rfc2898DeriveBytes(plainText, Encoding.UTF8.GetBytes(saltPhrase), 10000);
-            return Convert.ToBase64String(salt.GetBytes(25));
+            return salt.GetBytes(cb);
+        }
+
+        public static string CreateRfc2898SaltBase64(string plainText, string saltPhrase, int cb = 25)
+        {
+            return Convert.ToBase64String(CreateRfc2898Salt(plainText, saltPhrase, cb));
         }
 
         // generate byte key
-        public static byte[] CreateSalt(int keySizeInBytes)
+        public static byte[] CreateSalt(int keySizeInBytes = 16)
         {
             byte[] salt = new byte[keySizeInBytes];
             using (var provider = new System.Security.Cryptography.RNGCryptoServiceProvider())
@@ -165,7 +169,7 @@ namespace SharpUtils
             return salt;
         }
 
-        public static string CreateSaltAsBase64String(int keySizeInBytes)
+        public static string CreateSaltAsBase64String(int keySizeInBytes = 16)
         {
             return Convert.ToBase64String(CreateSalt(keySizeInBytes));
         }

@@ -1,9 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace SharpUtils.ValidationAttributes
+namespace MAXX.Utils.ValidationAttributes
 {
     public class DigitOnlyAttribute : RegularExpressionAttribute
     {
-        public DigitOnlyAttribute() : base(RegularExpressions.Validations.DigitRuleRegex) { }
+        public DigitOnlyAttribute() : base(RegularExpressions.Validations.DigitRuleRegex) { } 
     }
 }
