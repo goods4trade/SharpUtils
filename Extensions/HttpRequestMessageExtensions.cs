@@ -21,6 +21,18 @@ namespace MAXX.Utils
             return value;
         }
 
+        public static string GetHeaderKeyValue(this HttpResponseMessage response, string headerKey)
+        {
+            string value = string.Empty;
+
+            if (response.Headers.Contains(headerKey))
+            {
+                value = response.Headers.GetValues(headerKey).SingleOrDefault();
+            }
+
+            return value;
+        }
+
         public static string GetClientIpAddress(this HttpRequestMessage request)
         {
             if (request.Properties.ContainsKey(_httpContext))
@@ -42,6 +54,12 @@ namespace MAXX.Utils
             }
 
             return null;
+        }
+
+        public static bool IsApiAccess(this HttpRequestMessage request)
+        {
+            string value = request.GetHeaderKeyValue(SharpUtils.Consts.HeaderKeys.ApiAccessName);
+            return Convert.ToBoolean(string.IsNullOrEmpty(value) ? "false" : value);
         }
         
     }

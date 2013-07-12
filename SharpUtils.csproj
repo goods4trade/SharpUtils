@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="BaseObjects\ContactInfo.cs" />
     <Compile Include="BaseObjects\ErrorInfo.cs" />
+    <Compile Include="BaseObjects\HttpMessage.cs" />
     <Compile Include="BaseObjects\HttpStatusMessage.cs" />
     <Compile Include="BaseObjects\RESTfuls\Hyperlink.cs" />
     <Compile Include="BaseObjects\RESTfuls\Pagination.cs" />
@@ -65,7 +66,10 @@
     <Compile Include="BaseObjects\RESTfuls\RESTful.cs" />
     <Compile Include="BaseObjects\RESTfuls\RESTfuls.cs" />
     <Compile Include="BaseObjects\TransactionStatus.cs" />
+    <Compile Include="BaseObjects\UserPermissions.cs" />
     <Compile Include="Consts\HeaderKeys.cs" />
+    <Compile Include="Consts\ClaimKeys.cs" />
+    <Compile Include="Consts\Permissions.cs" />
     <Compile Include="Enums\HttpMessageStatus.cs" />
     <Compile Include="Extensions\Extensions.cs" />
     <Compile Include="Extensions\HashConversionExtensions.cs" />
@@ -73,6 +77,9 @@
     <Compile Include="Extensions\ParseObjectExtensions.cs" />
     <Compile Include="Extensions\ReplaceExtensions.cs" />
     <Compile Include="Extensions\ValidationExtensions.cs" />
+    <Compile Include="Handlers\HyphenatedRouteHandler.cs" />
+    <Compile Include="Helpers\CurrentClaimsPrincipal.cs" />
+    <Compile Include="Helpers\CurrentUserPermision.cs" />
     <Compile Include="Helpers\NumberUtilities.cs" />
     <Compile Include="Helpers\Requests.cs" />
     <Compile Include="Helpers\Responses.cs" />

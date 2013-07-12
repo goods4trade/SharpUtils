@@ -15,6 +15,7 @@ namespace MAXX.Utils.Helpers
         static string _apiRoutePermission = string.Empty;
         static string _apiAuthorizedKey = string.Empty;
         static string _apiUserKey = string.Empty;
+        static string _apiAccess = string.Empty;
 
         public static string RootUrl = HttpContext.Current.Request.Url.Scheme + "://" + HttpContext.Current.Request.ServerVariables["http_host"];
         public static string QueryString = HttpContext.Current.Request.Url.Query.ToString();
@@ -94,6 +95,7 @@ namespace MAXX.Utils.Helpers
             }
         }
 
+<<<<<<< HEAD
 
 
 
@@ -329,5 +331,18 @@ namespace MAXX.Utils.Helpers
 
         #endregion get route data
 
+=======
+        public static bool ApiAccess
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(_apiAccess) && HttpContext.Current.Request.Headers.AllKeys.Contains(Consts.HeaderKeys.ApiAccessName))
+                {
+                    _apiAccess = HttpContext.Current.Request.Headers.GetValues(Consts.HeaderKeys.ApiAccessName).SingleOrDefault();
+                }
+                return Convert.ToBoolean(string.IsNullOrEmpty(_apiAccess) ? "false" : _apiAccess);
+            }
+        }
+>>>>>>> f361537f27e6b6f61d375995c8601980250ac55a
     }
 }

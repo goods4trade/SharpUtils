@@ -16,9 +16,18 @@ namespace MAXX.Utils
             return Encoding.UTF8.GetBytes(s).ToMD5Hash();
         }
 
-        public static string ToRfc2898Hash(this string s, string salt)
+        public static byte[] ToRfc2898Hash(this string s, string salt, int cb = 25)
         {
+<<<<<<< HEAD
             return IdKeyGenerator.CreateRfc2898SaltBase64(s, salt);
+=======
+            return IdKeyGenerator.CreateRfc2898Salt(s, salt, cb);
+        }
+
+        public static string ToRfc2898HashBase64(this string s, string salt, int cb = 25)
+        {
+            return IdKeyGenerator.CreateRfc2898SaltBase64(s, salt, cb);
+>>>>>>> f361537f27e6b6f61d375995c8601980250ac55a
         }
 
         public static string Byte2String(this byte[] bytes)

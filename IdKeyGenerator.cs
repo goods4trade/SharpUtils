@@ -159,7 +159,11 @@ namespace MAXX.Utils
         }
 
         // generate byte key
+<<<<<<< HEAD
         public static byte[] CreateSalt(int keySizeInBytes = 16)
+=======
+        public static byte[] CreateSalt(int keySizeInBytes = 32)
+>>>>>>> f361537f27e6b6f61d375995c8601980250ac55a
         {
             byte[] salt = new byte[keySizeInBytes];
             using (var provider = new System.Security.Cryptography.RNGCryptoServiceProvider())
@@ -169,7 +173,11 @@ namespace MAXX.Utils
             return salt;
         }
 
+<<<<<<< HEAD
         public static string CreateSaltAsBase64String(int keySizeInBytes = 16)
+=======
+        public static string CreateSaltAsBase64String(int keySizeInBytes = 32)
+>>>>>>> f361537f27e6b6f61d375995c8601980250ac55a
         {
             return Convert.ToBase64String(CreateSalt(keySizeInBytes));
         }
